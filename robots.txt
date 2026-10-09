@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+Disallow: /.vscode/
+Disallow: /add-floating-icons.bat
+Disallow: /ht.html
+
+# Major Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI Crawlers & LLM Agents
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap Location
+Sitemap: https://ssmgtravels.in/sitemap.xml

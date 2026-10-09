@@ -1,0 +1,63 @@
+/* Clean Pricing Layout */
+.pricing-form {
+  margin: 20px 0;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: #f8fafc;
+  border-left: 4px solid #ff5e00;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.price-item:hover {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(255,94,0,0.1);
+  transform: translateX(2px);
+}
+
+.price-item .label {
+  font-weight: 500;
+  color: #475569;
+  font-size: 14px;
+}
+
+.price-item .value {
+  color: #ff5e00;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.price-item.premium {
+  border-left-color: #dc2626;
+  background: #fef2f2;
+}
+
+.price-item.premium .value {
+  color: #dc2626;
+}
+
+.price-item.contact {
+  border-left-color: #059669;
+  background: #f0fdf4;
+}
+
+.price-item.contact .value {
+  color: #059669;
+}
+
+@media (max-width: 768px) {
+  .price-item {
+    padding: 12px 14px;
+  }
+  
+  .price-item .label,
+  .price-item .value {
+    font-size: 13px;
+  }
+}

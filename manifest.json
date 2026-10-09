@@ -1,0 +1,31 @@
+{
+  "name": "SSMG Travels Gorakhpur - Nepal Tour & Taxi Services",
+  "short_name": "SSMG Travels",
+  "description": "Gorakhpur's leading travel agency specializing in Nepal tour packages, Ayodhya Ram Mandir darshan, and outstation taxi services with 100% Sunauli border permit assistance.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/logo.PNG",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": [
+    "travel",
+    "transportation"
+  ]
+}
