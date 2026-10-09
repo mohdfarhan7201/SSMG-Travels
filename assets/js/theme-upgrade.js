@@ -221,7 +221,6 @@
   function initMobileNav() {
     const menuWrapper = document.querySelector('.vs-menu-wrapper');
     const menuArea = document.querySelector('.vs-menu-area');
-    const toggleButtons = document.querySelectorAll('.vs-menu-toggle');
 
     if (!menuWrapper) return;
 
@@ -235,23 +234,33 @@
       document.body.style.overflow = '';
     }
 
-    // Toggle buttons (hamburger & close button)
-    toggleButtons.forEach(btn => {
-      btn.addEventListener('click', function (e) {
+    function isCloseButton(el) {
+      return !!(el.closest('.mobile-logo') || el.querySelector('.fa-xmark') || el.classList.contains('fa-xmark'));
+    }
+
+    // Single clean delegated click handler for toggle and backdrop
+    document.addEventListener('click', function (e) {
+      const toggleBtn = e.target.closest('.vs-menu-toggle');
+      if (toggleBtn) {
         e.preventDefault();
         e.stopPropagation();
-        if (menuWrapper.classList.contains('vs-body-visible')) {
+        if (isCloseButton(toggleBtn)) {
           closeMobileMenu();
         } else {
-          openMobileMenu();
+          if (menuWrapper.classList.contains('vs-body-visible')) {
+            closeMobileMenu();
+          } else {
+            openMobileMenu();
+          }
         }
-      });
-    });
+        return;
+      }
 
-    // Close on clicking backdrop (outside vs-menu-area)
-    menuWrapper.addEventListener('click', function (e) {
-      if (menuArea && !menuArea.contains(e.target)) {
-        closeMobileMenu();
+      // Close on clicking backdrop (outside vs-menu-area while open)
+      if (menuWrapper.classList.contains('vs-body-visible')) {
+        if (menuArea && !menuArea.contains(e.target)) {
+          closeMobileMenu();
+        }
       }
     });
 

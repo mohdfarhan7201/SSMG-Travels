@@ -181,7 +181,7 @@ function gtag_report_conversion(url) {
     <!-- Hero Fix CSS -->
     <link rel="stylesheet" href="hero-fix.css" />
     <!-- SSMG Modern Theme Upgrade CSS -->
-    <link rel="stylesheet" href="assets/css/theme-upgrade.css" />
+    <link rel="stylesheet" href="assets/css/theme-upgrade.css?v=3.5" />
     <style>
     @media (min-width: 992px) and (max-width: 1199px) {
         .vs-header .header-wc.style2 {
@@ -314,6 +314,53 @@ function gtag_report_conversion(url) {
             right: 12px !important;
         }
     }
+    
+    /* Bulletproof Mobile Menu Drawer */
+    .vs-menu-wrapper {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background-color: rgba(15, 23, 42, 0.75) !important;
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+        z-index: 9999999 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transition: opacity 0.3s ease, visibility 0.3s ease !important;
+    }
+    .vs-menu-wrapper.vs-body-visible {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        display: block !important;
+    }
+    .vs-menu-wrapper .vs-menu-area {
+        width: 85% !important;
+        max-width: 320px !important;
+        height: 100% !important;
+        background: #ffffff !important;
+        border-right: 3px solid #ff5e00 !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: -100% !important;
+        transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.35) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+        z-index: 10000000 !important;
+    }
+    .vs-menu-wrapper.vs-body-visible .vs-menu-area {
+        left: 0 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
     </style>
   </head>
 
@@ -1425,12 +1472,9 @@ function gtag_report_conversion(url) {
     <script src="assets/js/SplitText.min.js"></script>
 
     <!-- Main Js File -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=3.5"></script>
     <!-- SSMG Modern Theme Upgrade Script -->
-    <script src="assets/js/theme-upgrade.js"></script>
+    <script src="assets/js/theme-upgrade.js?v=3.5"></script>
 	  <!-- Google tag (gtag.js) --> <amp-analytics type="gtag" data-credentials="include"> <script type="application/json"> { "vars": { "gtag_id": "AW-17083557755", "config": { "AW-17083557755": { "groups": "default" } } }, "triggers": { } } </script> </amp-analytics>
-
   </body>
-
-
 </html>

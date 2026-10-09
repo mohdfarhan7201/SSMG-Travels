@@ -432,48 +432,51 @@ h1, h2, h3, h4, .font-serif {
 
 /* Enhanced Mobile Drawer Styles */
 .vs-menu-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  z-index: 999999;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(15, 23, 42, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  z-index: 9999999 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease !important;
 }
 
 .vs-menu-wrapper.vs-body-visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  display: block !important;
 }
 
 .vs-menu-wrapper .vs-menu-area {
-  width: 85%;
-  max-width: 320px;
-  height: 100%;
-  background: #ffffff;
-  border-right: 3px solid var(--ssmg-primary);
-  position: absolute;
-  top: 0;
-  left: -100%;
-  transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 8px 0 24px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  z-index: 1000000;
+  width: 85% !important;
+  max-width: 320px !important;
+  height: 100% !important;
+  background: #ffffff !important;
+  border-right: 3px solid var(--ssmg-primary, #ff5e00) !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.35) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  z-index: 10000000 !important;
 }
 
 .vs-menu-wrapper.vs-body-visible .vs-menu-area {
-  left: 0;
+  left: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .vs-menu-wrapper .mobile-logo {
