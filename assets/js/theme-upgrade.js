@@ -219,7 +219,84 @@
 
   // 8. Mobile Navigation Drawer Integration
   function initMobileNav() {
-    // Handled seamlessly by main.js $.fn.vsmobilemenu with .vs-menu-toggle
+    const menuWrapper = document.querySelector('.vs-menu-wrapper');
+    const menuArea = document.querySelector('.vs-menu-area');
+    const toggleButtons = document.querySelectorAll('.vs-menu-toggle');
+
+    if (!menuWrapper) return;
+
+    function openMobileMenu() {
+      menuWrapper.classList.add('vs-body-visible');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      menuWrapper.classList.remove('vs-body-visible');
+      document.body.style.overflow = '';
+    }
+
+    // Toggle buttons (hamburger & close button)
+    toggleButtons.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (menuWrapper.classList.contains('vs-body-visible')) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+    });
+
+    // Close on clicking backdrop (outside vs-menu-area)
+    menuWrapper.addEventListener('click', function (e) {
+      if (menuArea && !menuArea.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menuWrapper.classList.contains('vs-body-visible')) {
+        closeMobileMenu();
+      }
+    });
+
+    // Handle submenu expanding in mobile drawer
+    const menuItems = menuWrapper.querySelectorAll('.menu-item-has-children');
+    menuItems.forEach(item => {
+      const link = item.querySelector(':scope > a');
+      const submenu = item.querySelector(':scope > ul, :scope > .sub-menu');
+
+      if (link && submenu) {
+        // Add expand indicator icon if not present
+        if (!link.querySelector('.submenu-arrow')) {
+          const arrow = document.createElement('i');
+          arrow.className = 'fa-solid fa-chevron-down submenu-arrow ms-auto';
+          arrow.style.fontSize = '12px';
+          arrow.style.transition = 'transform 0.25s ease';
+          link.style.display = 'flex';
+          link.style.alignItems = 'center';
+          link.style.justifyContent = 'space-between';
+          link.appendChild(arrow);
+        }
+
+        link.addEventListener('click', function (e) {
+          // If it's a dropdown toggle (href is # or javascript:void)
+          const href = link.getAttribute('href');
+          if (!href || href === '#' || href.startsWith('javascript:')) {
+            e.preventDefault();
+            e.stopPropagation();
+            const isOpen = submenu.style.display === 'block';
+            submenu.style.display = isOpen ? 'none' : 'block';
+            const arrow = link.querySelector('.submenu-arrow');
+            if (arrow) {
+              arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
+          }
+        });
+      }
+    });
   }
 
 })();

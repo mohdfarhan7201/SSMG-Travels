@@ -267,26 +267,28 @@
    **************************************/
   const btt = document.querySelector(".scrollToTop");
 
-  // Add click functionality to scroll to the top
-  btt.addEventListener("click", (e) => {
-    e.preventDefault(); // Prevent default link behavior
-    gsap.to(window, { duration: 1, scrollTo: 0 });
-  });
+  if (btt) {
+    // Add click functionality to scroll to the top
+    btt.addEventListener("click", (e) => {
+      e.preventDefault(); // Prevent default link behavior
+      gsap.to(window, { duration: 1, scrollTo: 0 });
+    });
 
-  // Set initial styles
-  gsap.set(btt, { autoAlpha: 0, y: 50 });
+    // Set initial styles
+    gsap.set(btt, { autoAlpha: 0, y: 50 });
 
-  // Animate the button visibility on scroll
-  gsap.to(btt, {
-    autoAlpha: 1,
-    y: 0,
-    scrollTrigger: {
-      trigger: "body",
-      start: "top -20%",
-      end: "top -20%",
-      toggleActions: "play none reverse none",
-    },
-  });
+    // Animate the button visibility on scroll
+    gsap.to(btt, {
+      autoAlpha: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: "body",
+        start: "top -20%",
+        end: "top -20%",
+        toggleActions: "play none reverse none",
+      },
+    });
+  }
 
   /**************************************
    ***** 03. Preloader *****
