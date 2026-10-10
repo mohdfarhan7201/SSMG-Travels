@@ -3109,5 +3109,282 @@ h1, h2, h3, h4, .font-serif {
   box-shadow: 0 4px 14px rgba(220, 39, 67, 0.45) !important;
 }
 
+/* ==========================================================================
+   Universal Mobile Responsiveness Polish for Subpages
+   ========================================================================== */
+@media (max-width: 768px) {
+  .vs-breadcrumb,
+  .breadcumb-wrapper {
+    padding: 55px 0 35px !important;
+  }
+  .breadcrumb-title,
+  .breadcumb-title {
+    font-size: clamp(1.4rem, 5.5vw, 2.1rem) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 8px !important;
+  }
+  .breadcrumb-content span {
+    font-size: 11px !important;
+    letter-spacing: 1.5px !important;
+  }
+  .vs-breadcrumb-icon-1,
+  .vs-breadcrumb-icon-2 {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   Tour & Package Detail Mobile Polish
+   ========================================================================== */
+@media (max-width: 768px) {
+  .vs-destination-details {
+    padding-top: 25px !important;
+    padding-bottom: 40px !important;
+  }
+  .destination-info-tabs .nav-tabs {
+    flex-wrap: wrap !important;
+    border-radius: 14px !important;
+    padding: 6px !important;
+    background: #ffffff !important;
+    gap: 6px !important;
+  }
+  .destination-info-tabs .nav-tabs .nav-item {
+    flex: 1 1 auto !important;
+    text-align: center !important;
+  }
+  .destination-info-tabs .nav-tabs .nav-link {
+    padding: 10px 14px !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .itinerary-timeline-wrap .p-4 {
+    padding: 16px 14px !important;
+    border-radius: 14px !important;
+    margin-bottom: 14px !important;
+  }
+  .itinerary-timeline-wrap h5 {
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+  }
+  .itinerary-timeline-wrap p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+  .about-ssmg {
+    margin-bottom: 25px !important;
+  }
+  .about-ssmg p {
+    font-size: 14.5px !important;
+    line-height: 1.65 !important;
+  }
+  .custom-ul li {
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 8px !important;
+  }
+  .premium-gallery-item img {
+    height: 170px !important;
+  }
+  .tab-pane#cost .p-4 {
+    padding: 18px 14px !important;
+    border-radius: 14px !important;
+  }
+}
+
+/* ==========================================================================
+   Taxi Services Fleet Modern Responsive Cards
+   ========================================================================== */
+.tour-box {
+  background: #ffffff !important;
+  border-radius: 18px !important;
+  border: 1px solid #e2e8f0 !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05) !important;
+  margin-bottom: 24px !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+.tour-box:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12) !important;
+  border-color: rgba(255, 94, 0, 0.3) !important;
+}
+.tour-box .tour-box_img {
+  position: relative !important;
+  overflow: hidden !important;
+  background: #f8fafc !important;
+}
+.tour-box .tour-box_img img {
+  width: 100% !important;
+  height: 210px !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.5s ease !important;
+}
+.tour-box:hover .tour-box_img img {
+  transform: scale(1.05) !important;
+}
+.tour-box .tour-content {
+  padding: 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  justify-content: space-between !important;
+}
+.tour-box .box-title {
+  font-size: 19px !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+}
+.tour-box .box-title a {
+  color: #0f172a !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+.tour-box .box-title a:hover {
+  color: #ff5e00 !important;
+}
+.tour-box hr {
+  margin: 10px 0 14px !important;
+  border-color: #f1f5f9 !important;
+  opacity: 1 !important;
+}
+.tour-box .tour-content table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin-bottom: 18px !important;
+}
+.tour-box .tour-content table tr {
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+.tour-box .tour-content table td {
+  padding: 8px 4px !important;
+  font-size: 13.5px !important;
+  color: #475569 !important;
+}
+.tour-box .tour-content table td:last-child {
+  font-weight: 700 !important;
+  color: #ff5e00 !important;
+  text-align: right !important;
+}
+.tour-box .custom_button {
+  width: 100% !important;
+  padding: 11px 18px !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  font-size: 14.5px !important;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%) !important;
+  border: none !important;
+  color: #ffffff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3) !important;
+  transition: all 0.25s ease !important;
+  text-decoration: none !important;
+}
+.tour-box .custom_button:hover {
+  background: linear-gradient(135deg, #1ebe5d 0%, #0d7367 100%) !important;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45) !important;
+  transform: translateY(-2px) !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   Tour Packages Listing Modern Responsive Cards
+   ========================================================================== */
+.tour-package-box {
+  background: #ffffff !important;
+  border-radius: 18px !important;
+  border: 1px solid #e2e8f0 !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05) !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+.tour-package-box:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12) !important;
+  border-color: rgba(255, 94, 0, 0.3) !important;
+}
+.tour-package-box .tour-package-thumb {
+  height: 220px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+.tour-package-box .tour-package-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.5s ease !important;
+}
+.tour-package-box:hover .tour-package-thumb img {
+  transform: scale(1.06) !important;
+}
+.tour-package-box .tour-package-content {
+  padding: 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  justify-content: space-between !important;
+}
+.tour-package-box .title a {
+  font-size: 17.5px !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  line-height: 1.35 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+.tour-package-box .title a:hover {
+  color: #ff5e00 !important;
+}
+.tour-package-box .rating {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+.tour-package-box .stars i {
+  color: #fbbf24 !important;
+  font-size: 13px !important;
+}
+.tour-package-box .rating-text {
+  font-size: 12.5px !important;
+  color: #64748b !important;
+  font-weight: 500 !important;
+}
+.tour-package-box .get-touch-btn {
+  width: 100% !important;
+  padding: 10px 18px !important;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  background: linear-gradient(135deg, #ff5e00 0%, #ff8c42 100%) !important;
+  color: #ffffff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(255, 94, 0, 0.25) !important;
+  transition: all 0.25s ease !important;
+}
+.tour-package-box .get-touch-btn:hover {
+  background: linear-gradient(135deg, #e05300 0%, #e07a35 100%) !important;
+  box-shadow: 0 6px 20px rgba(255, 94, 0, 0.4) !important;
+  transform: translateY(-2px) !important;
+  color: #ffffff !important;
+}
+
+
 
 

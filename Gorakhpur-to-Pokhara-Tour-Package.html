@@ -792,7 +792,7 @@
           }
       }
     </style>
-      <link rel="stylesheet" href="assets/css/theme-upgrade.css?v=4.0" />
+      <link rel="stylesheet" href="assets/css/theme-upgrade.css?v=4.1" />
       <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -804,44 +804,66 @@
     <div id="ssmg-scroll-progress"></div>
 
     <!-- Mobile Menu Drawer -->
-    <div class="vs-menu-wrapper">
-      <div class="vs-menu-area text-center">
+        <div class="vs-menu-wrapper">
+      <div class="vs-menu-area">
         <div class="mobile-logo">
-          <a href="index.html"><img src="assets/img/logo.PNG" alt="SSMG Travels Gorakhpur - Premier Nepal Tour Operator" class="logo" fetchpriority="high" /></a>
-          <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
+          <a href="index.html">
+            <img src="assets/img/logo.PNG" alt="SSMG Travels Gorakhpur - Premier Nepal Tour Operator" class="logo" fetchpriority="high" />
+          </a>
+          <button class="vs-menu-toggle" type="button" aria-label="Close Mobile Menu"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="vs-mobile-menu">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="index.html"><i class="fa-solid fa-house-chimney me-2 text-warning"></i> Home</a>
+            </li>
             <li class="menu-item-has-children">
-              <a href="tour.html">Nepal Tours</a>
+              <a href="javascript:void(0)"><i class="fa-solid fa-mountain me-2 text-warning"></i> Nepal Tours</a>
               <ul class="sub-menu">
                 <li><a href="Best-3-Days-Pokhara-Tour-Package.html">Pokhara Tour (3 Days)</a></li>
                 <li><a href="Best-3-Days-Kathmandu-Tour-Package.html">Kathmandu Tour (3 Days)</a></li>
                 <li><a href="Best-4-days-Manakamana-Tour-Package.html">Manakamana Yatra (4 Days)</a></li>
                 <li><a href="Best-6-days-nepal-tour-package.html">Complete Nepal Circuit (6 Days)</a></li>
                 <li><a href="best-7-days-muktinath-tour-package.html">Muktinath Darshan (7 Days)</a></li>
-                <li><a href="tour.html">View All Nepal Packages</a></li>
+                <li><a href="tour.html" class="fw-bold text-primary"><i class="fa-solid fa-arrow-right me-1"></i> View All Packages</a></li>
               </ul>
             </li>
             <li class="menu-item-has-children">
-              <a href="destinations.html">Holy Yatras</a>
+              <a href="javascript:void(0)"><i class="fa-solid fa-om me-2 text-warning"></i> Holy Yatras</a>
               <ul class="sub-menu">
                 <li><a href="Best-2-Days-Ayodhya-Tour-Package.html">Ayodhya Ram Mandir (2 Days)</a></li>
                 <li><a href="best-2-days-vanarasi-tour-package.html">Kashi Vishwanath Varanasi (2 Days)</a></li>
-                <li><a href="best-9-days-vanaras-tour-package.html">Ayodhya-Kashi-Prayag (9 Days)</a></li>
+                <li><a href="best-9-days-vanaras-tour-package.html">Ayodhya + Kashi + Prayag (9 Days)</a></li>
                 <li><a href="best-7-days-janakpur-tour-package.html">Janakpur Dham Tour (7 Days)</a></li>
+                <li><a href="destinations.html" class="fw-bold text-primary"><i class="fa-solid fa-arrow-right me-1"></i> All Destinations</a></li>
               </ul>
             </li>
-            <li><a href="taxi-services.html">Taxi Services</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="taxi-services.html"><i class="fa-solid fa-taxi me-2 text-warning"></i> Taxi Services</a>
+            </li>
+            <li>
+              <a href="about.html"><i class="fa-solid fa-circle-info me-2 text-warning"></i> About Us</a>
+            </li>
+            <li>
+              <a href="contact.html"><i class="fa-solid fa-envelope me-2 text-warning"></i> Contact</a>
+            </li>
           </ul>
+
+          <div class="mobile-menu-cta mt-4 px-3 text-start">
+            <a href="tel:+917380708008" class="btn btn-warning w-100 mb-2 py-2 text-white fw-bold d-flex align-items-center justify-content-center gap-2">
+              <i class="fa-solid fa-phone"></i> +91 7380708008
+            </a>
+            <a href="https://wa.me/917380708008" target="_blank" class="btn btn-success w-100 py-2 text-white fw-bold d-flex align-items-center justify-content-center gap-2">
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Unified Slim Header -->
+    <!-- ==========================================================================
+         Unified Modern Header (Glassmorphic + Sticky on Scroll)
+         ========================================================================== -->
     <header class="ssmg-header">
       <!-- Top Announcement & Contact Bar -->
       <div class="ssmg-topbar">
@@ -856,7 +878,7 @@
             </div>
             <div class="col-lg-6 col-md-5 text-center text-md-end">
               <div class="d-flex align-items-center justify-content-center justify-content-md-end gap-3">
-                <span class="topbar-badge"><i class="fa-solid fa-shield-halved"></i> Sonauli Border & Nepal Specialist</span>
+                <span class="topbar-badge"><i class="fa-solid fa-shield-halved"></i> #1 Rated Sonauli Border & Nepal Tour Specialist</span>
                 <div class="social-links d-none d-md-flex gap-2">
                   <a href="https://wa.me/917380708008" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                   <a href="https://www.instagram.com/ssmg_travels?stkn=cHhxZjZpeDVkNWs=" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -867,7 +889,7 @@
         </div>
       </div>
 
-      <!-- Main Navigation Bar (Slim & Sleek) -->
+      <!-- Main Navigation Bar -->
       <nav class="ssmg-navbar-wrapper">
         <div class="ssmg-navbar-container">
           <!-- Logo -->
@@ -877,7 +899,7 @@
 
           <!-- Desktop Menu -->
           <ul class="ssmg-nav-menu d-none d-lg-flex">
-            <li><a href="index.html" class=""><i class="fa-solid fa-house-chimney me-1"></i> Home</a></li>
+            <li><a href="index.html" ><i class="fa-solid fa-house-chimney me-1"></i> Home</a></li>
             <li>
               <a href="tour.html" class="active"><i class="fa-solid fa-mountain me-1"></i> Nepal Tours <i class="fa-solid fa-angle-down"></i></a>
               <ul class="ssmg-dropdown">
@@ -890,7 +912,7 @@
               </ul>
             </li>
             <li>
-              <a href="destinations.html" class=""><i class="fa-solid fa-om me-1"></i> Holy Yatras <i class="fa-solid fa-angle-down"></i></a>
+              <a href="destinations.html"><i class="fa-solid fa-om me-1"></i> Holy Yatras <i class="fa-solid fa-angle-down"></i></a>
               <ul class="ssmg-dropdown">
                 <li><a href="Best-2-Days-Ayodhya-Tour-Package.html"><span>Ayodhya Ram Mandir</span> <span class="badge-sub">2 Days</span></a></li>
                 <li><a href="best-2-days-vanarasi-tour-package.html"><span>Kashi Vishwanath Varanasi</span> <span class="badge-sub">2 Days</span></a></li>
@@ -898,9 +920,9 @@
                 <li><a href="best-7-days-janakpur-tour-package.html"><span>Janakpur Dham Tour</span> <span class="badge-sub">7 Days</span></a></li>
               </ul>
             </li>
-            <li><a href="taxi-services.html" class=""><i class="fa-solid fa-taxi me-1"></i> Taxi Services</a></li>
-            <li><a href="about.html" class=""><i class="fa-solid fa-circle-info me-1"></i> About</a></li>
-            <li><a href="contact.html" class=""><i class="fa-solid fa-envelope me-1"></i> Contact</a></li>
+            <li><a href="taxi-services.html"><i class="fa-solid fa-taxi me-1"></i> Taxi Services</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-circle-info me-1"></i> About</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope me-1"></i> Contact</a></li>
           </ul>
 
           <!-- Action Buttons -->
@@ -914,12 +936,12 @@
               <i class="fa-solid fa-arrow-right"></i>
             </a>
             <button class="vs-menu-toggle d-inline-flex d-lg-none" type="button" aria-label="Toggle Mobile Menu">
-              <i class="fal fa-bars"></i>
+              <i class="fa-solid fa-bars"></i>
             </button>
           </div>
         </div>
       </nav>
-    </header>
+    </header>
     <main class="main">
 
 <section class="vs-breadcrumb" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/14352134/pexels-photo-14352134.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size: cover; padding: 120px 0;">
@@ -1489,7 +1511,7 @@
     <script src="assets/js/main.js?v=4.0"></script>
     
 
-      <script src="assets/js/theme-upgrade.js?v=4.0"></script>
+      <script src="assets/js/theme-upgrade.js?v=4.1"></script>
   </body>
 
 </html>
