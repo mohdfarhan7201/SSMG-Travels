@@ -44,8 +44,20 @@ body.vs-body {
   font-family: var(--ssmg-font-sans);
   color: var(--ssmg-text-main);
   background-color: var(--ssmg-bg-white);
+  overflow-x: hidden !important;
   overflow-x: clip !important;
+  max-width: 100vw !important;
+  width: 100% !important;
   -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 h1, h2, h3, h4, .font-serif {
@@ -2068,11 +2080,12 @@ h1, h2, h3, h4, .font-serif {
 @media (max-width: 767px) {
   .ssmg-topbar {
     text-align: center;
-    font-size: 12px;
+    font-size: 11.5px;
+    padding: 6px 0;
   }
   .ssmg-hero-section {
     min-height: 85vh;
-    padding: 60px 0 90px;
+    padding: 50px 0 80px;
   }
   .ssmg-hero-btns {
     flex-direction: column;
@@ -2086,24 +2099,152 @@ h1, h2, h3, h4, .font-serif {
     justify-content: center;
   }
   .ssmg-floating-actions {
-    bottom: 18px;
-    right: 18px;
-    gap: 10px;
+    bottom: 14px !important;
+    right: 12px !important;
+    gap: 8px !important;
   }
   .ssmg-float-btn {
-    width: 48px;
-    height: 48px;
-    font-size: 22px;
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 20px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22) !important;
   }
-  .ssmg-float-tooltip {
-    display: none;
+  .ssmg-float-btn.call {
+    font-size: 17px !important;
+  }
+  .ssmg-float-btn.scroll-top {
+    font-size: 15px !important;
+  }
+  .ssmg-float-tooltip,
+  .ssmg-float-pill {
+    display: none !important;
+  }
+
+  /* Subpages Breadcrumbs on Mobile */
+  .vs-breadcrumb {
+    padding: 65px 0 45px 0 !important;
+  }
+  .breadcrumb-title {
+    font-size: clamp(1.4rem, 5.5vw, 2.2rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Booking bar on Mobile */
+  .ssmg-btn-search {
+    min-height: 48px;
+    padding: 12px 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  /* Tabs on Mobile */
+  .destination-info-tabs .nav-tabs {
+    border-radius: 14px !important;
+    padding: 5px !important;
+    gap: 5px !important;
+    flex-wrap: nowrap !important;
+  }
+  .destination-info-tabs .nav-link {
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+    white-space: nowrap !important;
+  }
+  
+  /* Cards & Info Cards on Mobile */
+  .premium-info-card {
+    padding: 14px 8px !important;
+  }
+  .premium-info-card .icon-wrapper {
+    width: 44px !important;
+    height: 44px !important;
+    margin-bottom: 10px !important;
+  }
+  .premium-info-card .icon-wrapper i {
+    font-size: 18px !important;
+  }
+  .premium-info-card .info-label {
+    font-size: 10.5px !important;
+    margin-bottom: 4px !important;
+  }
+  .premium-info-card .info-value {
+    font-size: 13.5px !important;
+  }
+  
+  /* 4 Pillars Trust Strip on Mobile */
+  .ssmg-trust-col {
+    padding: 10px 8px;
+    gap: 12px;
+  }
+  .ssmg-trust-icon-box {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 18px;
+  }
+  .ssmg-trust-info h5 {
+    font-size: 14px;
+  }
+  .ssmg-trust-info p {
+    font-size: 11.5px;
+  }
+  
+  /* Form Inputs (prevent iOS auto-zoom) */
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  select,
+  textarea {
+    font-size: 16px !important;
   }
 }
 
 @media (max-width: 480px) {
-  .ssmg-float-pill {
-    display: none;
+  .ssmg-hero-title {
+    font-size: clamp(1.45rem, 5.8vw, 1.95rem) !important;
+    line-height: 1.25 !important;
   }
+  .ssmg-hero-pill {
+    font-size: 11px !important;
+    padding: 5px 12px !important;
+  }
+  .ssmg-hero-subtitle {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+  .ssmg-trust-chip {
+    font-size: 11.5px !important;
+    padding: 6px 12px !important;
+  }
+}
+
+/* Universal Table Styling for Car Fleet & Pricing */
+.tour-content table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 6px !important;
+  margin-bottom: 16px !important;
+  font-size: 13px !important;
+}
+.tour-content table tr {
+  background: #f8fafc;
+  border-radius: 8px;
+}
+.tour-content table td {
+  padding: 8px 12px !important;
+  color: #334155 !important;
+  vertical-align: middle;
+}
+.tour-content table td:first-child {
+  font-weight: 600;
+  color: #0f172a !important;
+  border-radius: 8px 0 0 8px;
+  width: 45%;
+}
+.tour-content table td:last-child {
+  text-align: right;
+  font-weight: 700;
+  color: #ff5e00 !important;
+  border-radius: 0 8px 8px 0;
 }
 
 /* Fallback styling for secondary pages using .header-sticky.navbars */
