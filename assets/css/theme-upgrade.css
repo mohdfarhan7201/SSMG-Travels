@@ -199,26 +199,35 @@ h1, h2, h3, h4, .font-serif {
   box-sizing: border-box;
 }
 
-/* Brand Logo (Proportionate & Crisp) */
-.ssmg-brand-logo {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  flex-shrink: 0;
+/* Brand Logo (Proportionate & Crisp - Laptop & Desktop Guaranteed) */
+.ssmg-brand-logo,
+.ssmg-navbar-container > a:first-child {
+  display: inline-flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+  max-height: 48px !important;
 }
 
-.ssmg-brand-logo img {
-  height: 38px;
-  max-height: 38px;
-  width: auto;
-  object-fit: contain;
-  transition: height 0.3s ease;
-  display: block;
+.ssmg-brand-logo img,
+.ssmg-navbar-container > a:first-child img,
+.ssmg-navbar-container a img,
+.ssmg-navbar-wrapper .ssmg-brand-logo img,
+header.ssmg-header .ssmg-brand-logo img {
+  height: 38px !important;
+  max-height: 38px !important;
+  width: auto !important;
+  max-width: 180px !important;
+  object-fit: contain !important;
+  transition: height 0.3s ease !important;
+  display: block !important;
 }
 
-.ssmg-navbar-wrapper.is-sticky .ssmg-brand-logo img {
-  height: 32px;
-  max-height: 32px;
+.ssmg-navbar-wrapper.is-sticky .ssmg-brand-logo img,
+.ssmg-navbar-wrapper.is-sticky .ssmg-navbar-container > a:first-child img,
+.ssmg-navbar-wrapper.is-sticky .ssmg-navbar-container a img {
+  height: 32px !important;
+  max-height: 32px !important;
 }
 
 /* Nav Menu Items (Slim Typography & Padding) */
